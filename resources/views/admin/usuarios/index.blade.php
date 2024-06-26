@@ -4,7 +4,7 @@
 
 <div class="d-flex justify-content-between mt-3">
     <h2>Lista de Usuarios</h2>
-    <a href="cadastrar.php" class="btn btn-primary">Cadastrar</a>
+    <a href="{{route('usuarios.create')}}" class="btn btn-primary">Cadastrar</a>
   </div>
 
   <hr>
@@ -17,31 +17,28 @@
         <th>Nome</th>
         <th>E-mail</th>
         <th>Ação</th>
+
       </tr>
     </thead>
     <tbody>
+
+      @foreach ($usuarios as $user)
+        
+      
       <tr>
-        <td>1</td>
+        <td>{{$user->id}}</td>
        
-        <td>Edson Rodrigues</td>
-        <td>edson@teste.com.br</td>
+        <td>{{$user->nome}}</td>
+        <td>{{$user->email}}</td>
         <td>
-          <a href="visualizar.php" class="btn btn-primary">Visualizar</a>
-          <a href="editar.php" class="btn btn-secondary">Editar</a>
+          <a href="{{route("usuarios.show" , ['id' => 1])}}" class="btn btn-primary">Visualizar</a>
+          <a href="{{route("usuarios.edit" , ['id' => 1])}}" class="btn btn-secondary">Editar</a>
           <a href="deletar.php" class="btn btn-danger">Excluir</a>
         </td>
       </tr>
-      <tr>
-        <td>1</td>
-       
-        <td>Edson Rodrigues</td>
-        <td>edson@teste.com.br</td>
-        <td>
-          <a href="#" class="btn btn-primary">Visualizar</a>
-          <a href="editar.php" class="btn btn-secondary">Editar</a>
-          <a href="#" class="btn btn-danger">Excluir</a>
-        </td>
-      </tr>
+
+      @endforeach
+     
     </tbody>
   </table>
 

@@ -39,10 +39,10 @@
       <div id="menu" class="col-md-2">
         <nav>
           <ul class="list-group mt-3">
-            <li class="list-group-item"><a href="#">Home</a></li>
+            <li class="list-group-item"><a href="{{route('dashboard')}}">Home</a></li>
             <li class="list-group-item"><a href="#">Categorias</a></li>
             <li class="list-group-item"><a href="#">Serviços</a></li>
-            <li class="list-group-item"><a href="#">Usuários</a></li>
+            <li class="list-group-item"><a href="{{route('usuarios.index')}}">Usuários</a></li>
           </ul>
         </nav>
 
