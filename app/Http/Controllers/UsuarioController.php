@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class UsuarioController extends Controller
 {
@@ -23,7 +24,14 @@ class UsuarioController extends Controller
 
     public function store(Request $request)
     {
-        dd("$request");
+        User::create([
+            "nome" => $request->nome,
+            "email" => $request->email,
+             "password" => Hash::make ($request->passoword),
+
+        ]);
+
+        return redirect()->route('usuarios.index');
     }
 
     public function show(string $id)
