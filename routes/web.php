@@ -14,6 +14,7 @@ Route::get('/admin/usuarios/cadastrar',[UsuarioController::class, "create"])->na
 Route::get('/admin/usuarios/editar/{id}',[UsuarioController::class, "edit"])->name("usuarios.edit");
 Route::get('/admin/usuarios/visualizar{id}',[UsuarioController::class, "show"])->name("usuarios.show");
 Route::post('/admin/usuarios/cadastrar/salvar',[UsuarioController::class, "store"])->name("usuarios.store");
+Route::put("/admin/usuarios/atualizar/{id}", [UsuarioController::class, "update"])->name("usuario.update");
 
 
 
