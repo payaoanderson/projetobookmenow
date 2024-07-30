@@ -15,17 +15,17 @@ class UsuarioSeeder extends Seeder
      */
     public function run(): void
     {
-        $faker = Faker::create("pt-BR");
-        for($i = 0; $i <= 10; $i++){
-            DB::table("usuarios")->insert([
-            "nome" => $faker->name(), 
-            "email" => $faker->unique()->safeEmail(),
-            "email_verified_at" => now(),
-            "password" => Hash::make("12345678"),
-            "created_at" => now(),
-            "updated_at" => now()
-            ]);
+        $faker = Faker::create('pt_BR');
 
+        for($i = 0; $i <= 10; $i++){
+            DB::table('usuarios')->insert([
+                'nome' => $faker->name(),
+                'email'=> $faker->unique()->safeEmail(),
+                'email_verified_at' => now(),
+                'password'=> Hash::make('12345678'),
+                'created_at' => now(),
+                'updated_at' => now()
+            ]);
         }
     }
 }

@@ -14,22 +14,27 @@ class CategoriaSeeder extends Seeder
      */
     public function run(): void
     {
-        $faker = Faker::create("pt-BR");
+        $faker = Faker::create('pt_BR');
+
         $categorias = [
-            "tecnologia",
-            "mecanico",
-            "eletricista",
-            "pintor",
-            "pedreiro",
-            "jardineiro"
+            'Tecnologia',
+            'Mecânico',
+            'Eletricista',
+            'Pintor',
+            'Pedreiro',
+            'Jardineiro'
         ];
 
         foreach($categorias as $categoria){
+
             DB::table('categorias')->insert([
-                "titulo" => $categoria,
-                "imagem" => asset("img/categoria-carro.jpg"),
-                "descricao" => $faker->sentence(),
+                'titulo' => $categoria,
+                'imagem' => asset('img/categoria-carro.jpg'),
+                'descricao' => $faker->sentence()
             ]);
+            
         }
+
+
     }
 }

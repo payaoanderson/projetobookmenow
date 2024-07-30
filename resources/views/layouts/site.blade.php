@@ -15,10 +15,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset("css/owl.carousel.min.css")}}">
-    <link rel="stylesheet" href="{{asset("css/owl.theme.default.min.css")}}">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
 
-    <link rel="stylesheet" href="{{asset("css/main.css")}}">
+    <link rel="stylesheet" href="{{ asset('css/main.css') }}">
 
 </head>
 
@@ -30,7 +30,7 @@
         </div>
 
         <div id="logotipo">
-            <img src="{{asset("img/logo.png")}}" alt="BookMeNow" height="40">
+            <img src="{{ asset('img/logo.png') }}" alt="BookMeNow" height="40">
         </div>
 
         <nav id="menu">
@@ -75,11 +75,12 @@
         </div>
     </div>
 
-     <main class="container">
-        @yield("conteudo")
-           
 
-     </main>
+    <main class="container">
+
+        @yield('conteudo')
+
+    </main>
 
     <!-- Bloco como funciona - Atividade Futura -->
 
@@ -132,15 +133,15 @@
                     </a>
                 </div>
                 <div class="link-app">
-                    <img src="{{asset("img/google-play.png")}}" alt="Baixe nosso APP Google play">
-                    <img src="{{asset("img/app-store.png")}}" alt="Baixe nosso APP Apple Store">
+                    <img src="{{ asset('img/google-play.png') }}" alt="Baixe nosso APP Google play">
+                    <img src="{{ asset('img/app-store.png') }}" alt="Baixe nosso APP Apple Store">
                 </div>
             </div>
 
         </div>
 
         <div class="copyright">
-            <p>&copy; 2024 - Todos os direitos são reservados | Desenvolvido por Edson</p>
+            <p>&copy; 2023 - Todos os direitos são reservados | Desenvolvido por Edson</p>
         </div>
 
     </footer>
@@ -153,9 +154,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
-    <script src="{{asset("js/owl.carousel.min.js")}}"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 
-    <script src="{{asset("js/main.js")}}"></script>
+    <script src="{{ asset('js/main.js') }}"></script>
 </body>
 
 </html>

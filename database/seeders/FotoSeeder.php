@@ -15,8 +15,8 @@ class FotoSeeder extends Seeder
     {
         DB::table('fotos')->insert([
             [
-                'imagem' => asset('img/categoria-informatica.jpg'),
-                'servico_id' => 1
+               'imagem' => asset('img/categoria-informatica.jpg'),
+                'servico_id'=> 1
             ],
             [
                 'imagem' => asset('img/categoria-informatica.jpg'),
@@ -42,25 +42,18 @@ class FotoSeeder extends Seeder
                 'imagem' => asset('img/categoria-informatica.jpg'),
                 'servico_id' => 7
             ],
-
             [
                 'imagem' => asset('img/categoria-informatica.jpg'),
                 'servico_id' => 8
             ],
-
             [
                 'imagem' => asset('img/categoria-informatica.jpg'),
                 'servico_id' => 9
             ],
-
             [
                 'imagem' => asset('img/categoria-informatica.jpg'),
                 'servico_id' => 10
             ],
-
-
-
-
 
         ]);
     }
