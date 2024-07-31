@@ -14,7 +14,7 @@
             <td>{{ $categoria->titulo }}</td>
         </tr>
         <tr>
-            <th>E-mail</th>
+            <th>Imagem</th>
             <td>{{ $categoria->imagem }}</td>
         </tr>
         <tr>
