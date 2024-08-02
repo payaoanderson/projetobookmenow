@@ -25,7 +25,7 @@
             <tr>
                 <th>ID</th>
                 <th>Título</th>
-                <th>Descricão</th>
+                <th>Descrição</th>
                 <th>Valor</th>
                 <th>Ação</th>
             </tr>
@@ -59,4 +59,6 @@
             @endforeach
         </tbody>
     </table>
+
+    {{ $servicos->links() }}
 @endsection
